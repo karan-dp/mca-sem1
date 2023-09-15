@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn JavaScript</title>
+    <script>
+        document.write(
+            `<h1 style="background:#ccc;color:black;">Learn JavaScript</h1>
+             <h3 style="background:#ccc;color:black;">document.write function<h3>
+            `
+        )
+        function handleBodyLoad(){
+            alert(`Page is loaded successfully`);
+        }
+        function handleBeforePrint(){
+            return `handle before print from script`;
+        }
+    </script>
+</head>
+<body  onbeforeprint="alert(handleBeforePrint());" onload="alert(`on load`);">
+    <!-- mouse - input tag
+         keyboard - input tag
+    form events - form or input tag 
+    page windows - body tag
+-->
+
+</body>
+</html>

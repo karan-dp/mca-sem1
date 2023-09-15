@@ -1,0 +1,57 @@
+RDBMS
+idm db, microsoft access
+
+database design
+
+sql - language 
+ddl = data definition language > create alter drop
+dml data manipulation language insert update delete
+dcl data control langugae grant revoke
+dql data query language select
+all relational db use sql as standard datbase language
+
+create table schema_name.tbl_name(
+	col1 dtatype column_constraint,
+	....
+	table_constraint
+)
+
+constraint constraint_name 
+
+
+create table customers(
+ID int primary key,
+cname varchar2(20),
+age int,
+Address varchar(20),
+Salary number(10,3) default 1000.00
+)
+
+
+
+create table customers(ID int primary key,cname varchar2(20),age int,Address varchar(20),Salary number(10,3) default 1000.00)
+
+
+sql constraints
+
+column level - single column in table 
+table level - more than one columns in table
+
+constraints
+
+not null - column cannot be null
+primary key - specifies the column that uniquely identifies a row in table
+unique - unique values in column
+foreign key - linkk to primary key in another table
+check - ex age constraint above 18
+
+
+linking primary key of one table to another is called referential integrity
+
+
+Sid	cid
+1	C1
+1	C2
+2	C1
+
+
