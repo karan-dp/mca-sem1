@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Events</title>
+    <style>
+      body {
+        height: 200vh;
+      }
+    </style>
+  </head>
+  <body
+    onload="hanldeOnLoad();"
+    onresize="handleResize();"
+    onbeforeprint="handleBeforePrint();"
+    onscroll="handleScroll();"
+  >
+    <input
+      type="text"
+      id="input--text"
+      placeholder="focus here"
+      onfocus="handleInputfoucs();"
+    />
+    <input
+      type="text"
+      id="input-blur"
+      onblur="handleInputBlur();"
+      placeholder="blur"
+    />
+    <textarea
+      name=""
+      id="textarea"
+      cols="30"
+      rows="10"
+      onclick="handleClick(this);"
+    ></textarea>
+
+    <p ondblclick="handleDblClick();" id="para">Lorem ipsum dolor sit amet.</p>
+
+    <input
+      type="text"
+      name=""
+      id="keydown"
+      onkeydown="handleKeyDown();"
+      placeholder="keydown"
+    />
+    <input
+      type="text"
+      id="input--change"
+      onchange="handleChange();"
+      placeholder="onchange"
+    />
+    <hr />
+    <hr />
+
+    <textarea name="" id="textarea2" cols="30" rows="10"></textarea>
+    <input
+      type="text"
+      name=""
+      id="oncopy"
+      oncopy="handleCopy();"
+      placeholder="oncopy"
+    />
+
+    <input type="text" id="cut" placeholder="on cut" oncut="handleCut();" />
+
+    <input type="text" ondrag="handleDrag()" />
+    <input type="text" onselect="handleSelect(this)" value="skjhjklkkl"/>
+    <hr>
+    <form action="">
+        <fieldset>
+            <label for="">FORM</label>
+            <input type="text" name="" id="email" placeholder="enter email">
+            <select name="" id="ddlSelect">
+                <option value="select">select</option>
+                <option value=""></option>
+                <option value=""></option>
+            </select>
+        </fieldset>
+    </form>
+    <script>
+        function handleSelect(e){
+            console.log('selected :' ,e.value)
+        }
+      function handleScroll() {
+        console.log("scrolll");
+      }
+
+      function handleResize() {
+        console.log("handle resize");
+      }
+
+      function handleBeforePrint() {
+        alert("before print event");
+      }
+      function hanldeOnLoad() {
+        console.log("page is loaded ");
+      }
+      function handleCut() {
+        alert(`cut`);
+        let cut = document.getElementById("cut");
+        textarea2.value = cut.value;
+      }
+
+      function handleCopy() {
+        alert("copy");
+        let copy = document.getElementById("oncopy");
+        // alert('copy')
+        let textarea2 = document.getElementById("textarea2");
+        console.log(copy.value);
+        textarea2.value = copy.value;
+      }
+
+      function handleChange() {
+        let change = document.getElementById("input--change");
+        alert(change.value);
+      }
+      function handleInputfoucs() {
+        let inputText = document.getElementById("input--text");
+        inputText.style.background = "black";
+        inputText.style.color = "white";
+      }
+
+      function handleInputBlur() {
+        let inputBlur = document.getElementById("input-blur");
+        inputBlur.style.background = "yellow";
+        inputBlur.setAttribute("placeholder", "on blur placeholder");
+      }
+
+      function handleClick(event) {
+        let textarea = document.getElementById("textarea");
+        textarea.style.background = "red";
+        let x = event.clientX;
+        let y = event.clientY;
+        console.log(x + " " + y);
+      }
+
+      function handleDblClick() {
+        let para = document.getElementById("para");
+        if (para.style.fontSize.replace('px','') <= 25) {
+          para.style.color = "green";
+          para.style.fontSize = "initial";
+        }
+        else{
+          para.style.color = "blue";
+          para.style.fontSize = "25px";
+        }
+      }
+
+      function handleKeyDown() {
+        let keydown = document.getElementById("keydown");
+        let textarea = document.getElementById("textarea");
+        textarea.value = keydown.value;
+      }
+
+      let textarea2 = document.getElementById("textarea2");
+
+      window.addEventListener("mouseover", (e) => {
+        // console.log(e.clientX, e.clientY);
+      });
+    </script>
+  </body>
+</html>

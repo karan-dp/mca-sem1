@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button type="button" onclick="wopen();"></button>
+    <script>
+      function wPrompt() {
+        let p = prompt("enter your name");
+        alert("welcome "+ p);
+      }
+
+      function wConfirm() {
+        let c = confirm("do you want to exit");
+        if (c == true) {
+          alert(c);
+        } else {
+          alert(c);
+        }
+      }
+      function wopen(){
+        open("https://www.google.com/");
+      }
+      function handleTimeout(){
+        setTimeout( () => {
+            open("https://kjsim.somaiya.edu/en/")
+        },5000)
+      }
+    </script>
+  </body>
+</html>
