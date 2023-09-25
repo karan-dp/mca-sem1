@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo</title>
+    <style>
+        a::before{
+            content: "link";
+        }
+        a::after{
+            content: "click on this to visit page";
+            color: gray;
+        }
+        a:link{
+            color: green;
+        }
+        pre::first-letter{
+
+        }
+        textarea::grammar-error{
+            color: green;
+        }
+        textarea{
+            
+        }
+    </style>
+</head>
+<body>
+    <a href="#">Google</a> <br>
+    <a href="#">Yahoo</a> <br>
+    <a href="#">Outlook</a>
+
+   
+</body>
+</html>

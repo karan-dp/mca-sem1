@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="external.css">
+    <style>
+        /* id selector */
+        #color {
+            color: aqua;
+        }
+
+        /* class selector */
+        .bgcolor {
+            background-color: rebeccapurple;
+        }
+
+        .cc {
+            color: red;
+        }
+
+        /* element selector */
+        h1 {
+            background-color: beige;
+        }
+
+        /* group selector */
+        h1,
+        h3 {
+            font-size: large;
+        }
+
+        /* universal selector */
+        /* {
+            background-image: url(D:\45_Aaryan_FYMCA_WA\html\cc.jpg);
+        }*/
+        /* specific element selector*/
+        div.center {
+            font-size: small;
+            margin: auto;
+            border: 3px solid black;
+            height: 300px;
+            width: 500px;
+        }
+
+        /*combinator selector*/
+        /* descendant selector by space*/
+        div h2 {
+            background-color: red;
+        }
+
+        /*Sibling selector*/
+        div>pre {
+            background-color: blue;
+        }
+
+        /*Immediate sibling selector
+         in this the first child tag will be taken no second child*/
+        div+p {
+            background-color: aqua;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        }
+
+        /*General Selector*/
+        div~pre {
+            background-color: aquamarine;
+        }
+
+        /*Pseudo classes*/
+        a:link {
+            color: green;
+            font-size: large;
+        }
+
+        a:hover {
+            background-color: blue;
+            font-size: x-large;
+            font-weight: 500;
+
+        }
+
+        div.parent+p{
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="http://www.google.com/search">Google</a>
+    <h1 id="color" class="bgcolor ">Hello World</h1>
+    <h2>KJSIM</h2>
+    <h3>Web Development</h3>
+    <div>
+        <p>
+            Lorem ipsum dolor sit amet
+            consectetur adipisicing elit. Facere commodi
+            neque ullam minus alias repellendus animi.
+        </p>
+        <pre>
+            Web Development Team
+        </pre>
+    </div>
+    <h1>Wednesday</h1>
+    <div class="">
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, iste.
+
+        </p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident dele
+            niti eos distinctio. Molestiae, praesentium minima.</p>
+        <pre>
+            K J Somaiya Collge of Management
+        </pre>
+    </div>
+
+    <div class="parent"></div>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id, repellat!</p>
+</body>
+
+</html>

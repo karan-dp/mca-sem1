@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* combination and explicit class selector */
+      /* div.imp:hover{
+            font-size: large;
+            background-color: #CCC;
+        } */
+      /* p {
+        display: none;
+        padding: 20px;
+      }
+
+      div:hover + p {
+        display: block;
+        height: 300px;
+        width: 300px;
+        background-color: aquamarine;
+      } */
+      /* input{
+        display: block;
+        margin-bottom: 10px;
+      }
+      p:first-child {
+        background-color: aqua;
+      }
+      p:last-child {
+        background-color: purple;
+      }
+      input:empty {
+        background-color: yellow;
+      }
+      input:disabled {
+        background-color: lightgray;
+      }
+      input:active {
+        height: 70px;
+        width: 300px;
+        font-family: cursive;
+        background-color: bisque;
+      } */
+    </style>
+    <style>
+        input:checked{
+            height: 50px;
+            width: 50px;
+            background-color: aqua;
+        }
+        input[type=number]:in-range{
+            border: 1px solid green;
+        }
+        input[type=number]:out-of-range{
+            border: 2px solid red;
+        }
+        input:invalid{
+            color: red;
+            font-family: monospace;
+        }
+        input:optional{
+            background-color: olive;
+        }
+
+        input:read-only{
+            background-color: crimson;
+            color: white;
+        }
+        input:disabled{
+            background-color: darkorange;
+        }
+        ::selection{
+            background-color: yellow;
+            color: blue;
+        }
+        p::selection{
+            background-color: pink;
+            color: purple;
+        }
+    </style>
+  </head>
+  <body>
+    <label for="range">Select number in range 1 to 20</label>
+    <input type="number" min="1" max="20">
+    <br>
+    <input type="text" readonly placeholder="read-only">
+    <input type="text" name="" id="" disabled placeholder="disabled">
+    <br>
+    <br>
+    <input type="checkbox" name="" id="" value="MCA">FY-MCA
+    <input type="checkbox" name="" id="" value="MCA">SY-MCA
+
+    <input type="radio" name="" id="">MCA
+    <input type="radio" name="" id="">MBA
+
+    <p>dummy text Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, culpa.</p>
+    <!-- <div>Hover over me to see paragraph</div>
+    <p>hello from paragraph</p> -->
+    <!-- <div class="input">
+        <input type="text">
+        <input type="text" disabled>
+        <input type="text" placeholder="enter details">
+    </div>
+    <div>
+      <p>this is 1 para</p>
+      <p>this is 2 para</p>
+      <p>this is 3 para</p>
+    </div> -->
+  </body>
+</html>
