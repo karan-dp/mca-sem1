@@ -48,7 +48,7 @@
                     <option value="delhi">Delhi</option>
                     <option value="banglore">Banglore</option>
                 </select><br>
-                <input type="button" value="Submit" onclick="handleFormSubmit(this);">
+                <input type="button" value="Submit" onclick="handleFormSubmit();">
                 <input type="reset" value="Clear">
 
                 <h3>Registration Data</h3>
@@ -71,8 +71,8 @@
 
         // document.getElementsByName() - for this tag should have name attribute
 
-        
-        function handleFormSubmit(event){
+
+        function handleFormSubmit(){
             let email = document.getElementById("email").value;
             let pwd = document.getElementById("password").value;
             let dob = document.getElementById("dob").value;
