@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        input[type=email],
+        input[type=password],
+        input[type=date]
+        {
+            display: block;
+            margin-bottom: 5px;
+        }
+    </style>
+    <style>
+        form{
+            background-color: bisque;
+            margin: 0 auto;
+            width: 500px;
+            height: auto;
+        }
+        div#output{
+            margin: 5px 0px;
+            border: 1px solid black;
+            padding: 5px 5px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <form action="">
+            <fieldset>
+                <legend> Registration Form</legend>
+                <input type="email" name="" id="email" placeholder="enter email">
+                <input type="password" name="" id="password" placeholder="enter password">
+                <input type="date" name="dob" id="dob">
+                <input type="radio" name="gender"  value="male">Male
+                <input type="radio" name="gender"  value="female">Female<br>
+
+                <input type="checkbox" name="degree"  value="BA">BA
+                <input type="checkbox" name="degree"  value="BCOM">BCom
+                <input type="checkbox" name="degree"  value="BSC IT">Bsc IT
+                <input type="checkbox" name="degree"  value="BSC CS">Bsc CS<br>    
+                <textarea name="" id="textarea" cols="30" rows="3"></textarea><br>
+                <select name="" id="selectCity">
+                    <option value="mumbai">Mumbai</option>
+                    <option value="delhi">Delhi</option>
+                    <option value="banglore">Banglore</option>
+                </select><br>
+                <input type="button" value="Submit" onclick="handleFormSubmit(this);">
+                <input type="reset" value="Clear">
+
+                <h3>Registration Data</h3>
+                <div id="output">
+                        
+                </div>
+
+            </fieldset>
+        </form>
+    </div>
+    <script>
+        function handleFormSubmit(event){
+            let email = document.getElementById("email").value;
+            let pwd = document.getElementById("password").value;
+            let dob = document.getElementById("dob").value;
+            let gender = document.querySelector("input[name='gender']:checked").value;
+             let degree = document.getElementsByName("degree");
+            let city = document.getElementById("selectCity").value;
+            let textarea = document.querySelector("#textarea").value;
+            console.log(email,pwd,dob,gender,city,degree,textarea);
+            
+            let output = document.querySelector("#output");
+            output.innerHTML += "Email : " + email;
+            output.innerHTML += "<br>Password : " + pwd;
+            output.innerHTML += "<br>Date of Birth : " + dob;
+            output.innerHTML += "<br>Gender : " + gender ;
+            output.innerHTML += "<br>Degree : "
+            for (let i = 0; i < degree.length; i++) {
+                if(degree[i].checked){
+                    output.innerHTML += degree[i].value + " ";
+                } 
+            }
+            output.innerHTML += "<br>City :" + city;
+            output.innerHTML += "<br>Description : " + textarea;
+            
+        }
+    </script>
+</body>
+</html>
