@@ -60,6 +60,18 @@
         </form>
     </div>
     <script>
+
+        // here # or . is not used
+        // document.getElementById('id-name')
+        // document.getElementsByClassName('classname')
+
+        // here prefix is require because this is a general selector
+        // querySelector() - can select any tag but only first occurence
+        // document.querySelectorAll() - can select all tag which matches
+
+        // document.getElementsByName() - for this tag should have name attribute
+
+        
         function handleFormSubmit(event){
             let email = document.getElementById("email").value;
             let pwd = document.getElementById("password").value;
