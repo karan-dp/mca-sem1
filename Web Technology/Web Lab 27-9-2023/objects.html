@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // javascript objects
+        // 1.object literal
+        // 2. creating instance of object class
+        // using object constructor
+
+        // 1.
+        let student = {
+            rollno : 33,
+            name : "karan panchal",
+            email : "karan.dp@somaiya.edu"
+        };
+        let student2 = {
+            rollno : 34,
+            name : "falguni parab",
+            email : "falguni@somaiya.edu"
+        };
+
+        document.write("<h2> Roll No: "+student.rollno+"</h2>")
+        document.write("<h2> Student Name: "+student.name+"</h2>")
+        document.write("<h2>Email : "+student.email+"</h2><hr>")
+
+        document.write(`<h2> Roll No: ${student2.rollno}</h2>`)
+        document.write(`<h2> Student Name: ${student2.name}</h2>`)
+        document.write(`<h2>Email : ${student2.email}</h2><hr>`)
+
+        // 2. create using Object Class
+        //call Object class constructor
+
+        let faculty = new Object();
+        faculty.name = "Karan Panchal";
+        faculty.subject = "DSA";
+        faculty.department = "DST";
+
+        document.write("<h2> Name : "+faculty.name+"</h2>")
+        document.write("<h2> Subject :"+faculty.subject+"</h2>")
+        document.write("<h2> Department : "+faculty.department+"</h2><hr>")
+
+        // 3.creating object using object Constructor
+        // constructor function
+        function Faculty(name,sub,dep){
+            this.name = name;
+            this.sub = sub;
+            this.dep = dep;
+            // member function 
+            this.showFaculty = function() {
+                document.write("<h2> Faculty Details <h2>")
+                document.write("Name : "+this.name+"<br>")
+                document.write("Subject : "+this.sub+"<br>")
+                document.write("Department : "+this.dep+"<hr>")
+
+            }
+        }
+
+        let f1 = new Faculty("Karan","Web","DST");
+        f1.showFaculty();
+
+    </script>
+</body>
+</html>
