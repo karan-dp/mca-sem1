@@ -1,0 +1,13 @@
+import math
+print(abs(10.86))
+print(math.log(12))
+print(math.log10(45))
+print(math.floor(10.84))
+print(math.cos(10.0))
+print(math.ceil(10.56))
+print(max(10,12))
+print(min(10,12))
+print(round(14.23))
+print(round(14.556))
+print(math.sin(29))
+print(math.sqrt(16))
