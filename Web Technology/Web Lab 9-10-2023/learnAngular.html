@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Angular</title>
+    <script src="../Assets/angular.min.js"></script>
+</head>
+<body ng-app="">
+    <div  ng-init="name='Karan Panchal';university='Somaiya University'">
+        <h3>hello, {{5+5}}</h3>
+        <h4>My name is {{name}}</h4>
+        <h5>studing in {{university}}</h5>
+        <h5>hello , {{'Welcome ,'+name+'you are from :'+university}}</h5>
+        <!-- angularJS -->
+    </div>
+    
+    <hr>
+    <h3>Angular JS arrays</h3>
+    <div ng-init="sub=['web tech','DBMS','mobile app']" >
+        <p>{{sub[0]}}</p>
+        <p>{{sub[1]}}</p>
+        <p>{{sub[2]}}</p>
+    </div>
+
+    <h3>Iterate through arrays</h3>
+    <div ng-init="fruits=['apple','banana','orange','mango']" >
+        <ul ng-repeat="x in fruits">
+            <li>{{x}}</li>
+        </ul>
+    </div>
+    <h3>AngularJS Objects</h3>
+    <div ng-init="emp={empid:100,name:'Karan',email:'k.dp@gmail.com'}">
+        empId : <span>{{emp.empid}}</span> <br>
+        name : <span>{{emp.name}}</span><br>
+        email : <span>{{emp.email}}</span>
+    </div>
+</body>
+</html>
