@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Angular Controller</title>
+    <script src="./Assets/angular.min.js"></script>
+  </head>
+  <body>
+    <div ng-app="myApp" ng-controller="myController">
+      <h3 ng-dblclick="changeSubject()">{{subject}}</h3>
+      <h3 ng-click="changeCourse()">{{course}}</h3>
+
+      <h3>List of Courses in MCA</h3>
+      <ul ng-repeat="x in customArray">
+        <li>{{x}}</li>
+      </ul>
+      <h3>calling controller :{{details()}}</h3>
+      <!-- <ul ng-repeat="x in nested">
+        <li> {{x.name}}  {{x.age}}</li>
+      </ul> -->
+
+      <hr>
+      <hr>
+      <mca-directive></mca-directive>
+    </div>
+    <!-- scope out myApp -->
+    <script>
+      angular.module("myApp", []).controller("myController", function ($scope) {
+        $scope.subject = "web technology-1";
+        $scope.course = "MCA Batch 2023-2025";
+
+        $scope.customArray = ["Web Tech", "DBMS", "Python", "AI"];
+        $scope.details = function () {
+          return `details() is called from controller`;
+        };
+        $scope.changeSubject = function () {
+          $scope.subject = "Mobile App Development";
+        };
+        $scope.changeCourse = function () {
+          $scope.course = "Python";
+        };        
+        
+        // $scope.nested = [
+        //   { name: "karan", age: 12 },
+        //   { name: "darshan", age: 13 },
+        //   { name: "falguni", age: 14 },
+        // ];
+      });
+    </script>
+  </body>
+</html>
