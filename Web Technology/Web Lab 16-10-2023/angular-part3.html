@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Angular Controller</title>
+    <style>
+        *{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+    <script src="./Assets/angular.min.js"></script>
+  </head>
+  <body>
+    <h2>Angular Directive</h2>
+    <div ng-app="myApp" ng-controller="myController">
+      <!-- as comment -->
+      <h3>using as comment</h3>
+      <!-- directive: mca-directive -->
+      <!-- restrict: E A C M declares -->
+
+      <!-- as tag -->
+      <h3>using as tag</h3>
+      <mca-directive></mca-directive>
+      <!-- using as attribute -->
+      <h3>using as attribute</h3>
+      <h3 mca-directive>from attribure</h3>
+
+      <!-- using class -->
+      <h3>using as class</h3>
+      <div class="mca-directive"></div>
+    </div>
+    <!-- scope out myApp -->
+    <script>
+      angular.module("myApp", []).directive("mcaDirective", function () {
+        return {
+          restrict: "EACM",
+          replace:true,
+          template: "<p>MCA Batch 2023-25 KJSIM</p>",
+        };
+      });
+    </script>
+  </body>
+</html>

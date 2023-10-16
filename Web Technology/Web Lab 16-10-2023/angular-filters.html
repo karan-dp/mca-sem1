@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Angular Filters</title>
+    <link rel="stylesheet" href="./Assets/css/bootstrap.min.css" />
+    <style>
+      * {
+        margin: 1px;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+    </style>
+    <script src="./Assets/angular.min.js"></script>
+  </head>
+  <body ng-app="">
+    <!-- AngularJs Filters
+    uppercase
+    lowercase
+    date
+    number
+    limito
+    orderby
+    Filters
+    currency -->
+
+
+    <!-- <h1>Filter in List:</h1>
+      search for course : <input type="text" ng-model="myfilter" /> <br /><br />
+      <ul>
+        <li ng-repeat="x in subject | filter:myfilter">{{x}}</li>
+      </ul>
+      <hr />-->
+    <!-- limitTo -->
+    <!-- <h1>Filter in List LimitTo:</h1>
+      <ul>
+        <li ng-repeat="x in subject | limitTo:3">{{x}}</li>
+      </ul> -->
+
+    <!--  <input type="number" ng-model="pi" /> <br /><br />
+      <h2>number filter: {{pi | number:4}}</h2>
+      <hr />
+      <input type="date" ng-model="dob" /> <br /><br />
+      <h2>{{dob | date:'medium'}}</h2>
+
+      <input type="text" ng-model="dept" /> <br /><br />
+      <h2>{{dept | uppercase}}</h2>
+      <hr />
+      <input type="text" ng-model="college" /> <br /><br />
+      <h2>{{college | lowercase}}</h2>
+      <hr />
+      price : <input type="text" ng-model="price" /> <br /><br />
+      <h2>{{price | currency}}</h2>
+      <h2>Price in rupees : {{price | currency: "₹"}}</h2>
+      -->
+  </body>
+</html>
